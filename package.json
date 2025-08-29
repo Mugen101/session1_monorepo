@@ -7,6 +7,14 @@
   ],
   "scripts": {
     "dev": "npm run dev --workspace=web",
-    "test": "npm run test --workspaces"
+    "test": "npm run test --workspaces",
+    "api:dev": "cd apps/api && poetry run uvicorn src.api.main:app --reload",
+    "api:test": "cd apps/api && poetry run pytest"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.55.0",
+    "@testing-library/jest-dom": "^6.8.0",
+    "@vitest/coverage-v8": "^3.2.4",
+    "vitest": "^3.2.4"
   }
 }
